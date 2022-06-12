@@ -1,33 +1,16 @@
-// Exercise 1
-
-function printOdds(count) {
-     for (let i = 1; i <= count; i++){
-        if (i % 2!=0) {
-            console.log(i);
-        }
-    }
-}
-printOdds(9)
-
-// Exercise 2
-
-function checkAge(userName, age) {
-    let checkAge = 16
-    let aboveSixteen = "Congrats, ${userName} you can drive!";
-    let belowSixteen = "Sorry you need to wait until you're 16"
-
-    if (age < checkAge){
-    console.log(belowSixteen);
-    }else{ (age > checkAge)
-    console.log(aboveSixteen);
+function checkAge(name, age) {
+   let oldEnoughMsg = `Congrats ${name}! You can drive!`;
+   let tooYoungMsg = `Sorry ${name}, you need to wait ${16 - age} year(s) until you can drive`;
+    
+   if (age < 16) {
+       console.log(tooYoungMsg)
+    } else {
+        console.log(oldEnoughMsg)
     }
 
-}
+} 
 
-checkAge("Matt", 50)
-
-// Exercise 3
-
+checkAge("Matt", 49)
 
 function checkQuad(x, y) {
     if (x > 0 && y > 0) {
@@ -52,9 +35,6 @@ console.log(checkQuad(-11, 1));
 console.log(checkQuad(-1, -11));
 
 
-// Exercise 4
-
-
 function isValidTriangle(a, b, c) {
     return a + b > c && a + c > b && b + c > a;
 }
@@ -77,9 +57,6 @@ console.log(checkTriangle(2, 2, 2));
 console.log(checkTriangle(1, 2, 2));
 console.log(checkTriangle(1, 1, 2));
 
-// Exercise 5
-
-     
 function dataUsageFeedback(planLimit, day, usage) {
     let periodLength = 30;
     let currentAvg = usage / day;
@@ -102,21 +79,3 @@ console.log(`You are ${statusMsg} your average daily use ${currentAvg} continuin
 
 
 }
-    
-    
-
-
-
-
-
-
-    
-
-
-
-  
-
-
-
-
-
